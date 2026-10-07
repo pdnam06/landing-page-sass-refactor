@@ -1,0 +1,9 @@
+PASS 1440px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=1440px
+PASS 901px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=906px
+PASS 900px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=900px
+PASS 769px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=769px
+PASS 768px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=768px
+PASS 521px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=521px
+PASS 520px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=520px
+PASS 390px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=390px
+PASS 320px: 153 elements match original geometry and computed styles; original/refactored scrollWidth=320px

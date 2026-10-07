@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    scroll-margin-top: 70px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading h2,
+.process-copy h2,
+.cta-section h2 {
+    margin-bottom: 14px;
+    color: vars.$navy;
+    font-size: clamp(31px, 4vw, 44px);
+    line-height: 1.1;
+}
+
+.section-heading > p:last-child,
+.process-copy > p:last-child,
+.cta-section > div > p:last-child {
+    color: vars.$muted;
+    font-size: 16px;
+    line-height: 1.7;
+}

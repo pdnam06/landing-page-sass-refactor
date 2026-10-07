@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.hero {
+    background:
+        radial-gradient(circle at 85% 12%, rgba(57, 195, 186, 0.16), transparent 27%),
+        radial-gradient(circle at 10% 80%, rgba(46, 123, 224, 0.1), transparent 28%);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    min-height: 670px;
+    align-items: center;
+    gap: 70px;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: vars.$blue;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero {
+  h1 {
+    margin-bottom: 19px;
+    color: vars.$navy;
+    font-size: clamp(43px, 6vw, 68px);
+    line-height: 1.04;
+  }
+}
+
+.hero {
+  h1 span {
+    color: vars.$blue;
+  }
+}
+
+.hero-description {
+    max-width: 630px;
+    color: vars.$muted;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.hero-actions {
+    display: flex;
+    margin-top: 29px;
+    gap: 11px;
+}

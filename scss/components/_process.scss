@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.process {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+    gap: 70px;
+}
+
+.process-copy {
+    position: sticky;
+    top: 105px;
+}
+
+.process-list {
+    list-style: none;
+}
+
+.process-list {
+  li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid vars.$border;
+  }
+}
+
+.process-list {
+  li > span {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    place-items: center;
+    color: white;
+    background: vars.$blue;
+    font-size: 12px;
+    font-weight: 800;
+  }
+}
+
+.process-list {
+  strong {
+    color: vars.$navy;
+    font-size: 18px;
+  }
+}
+
+.process-list {
+  p {
+    margin-top: 7px;
+    color: vars.$muted;
+    font-size: 14px;
+  }
+}

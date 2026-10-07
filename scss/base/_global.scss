@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+:root {
+    --navy: #{vars.$navy};
+    --blue: #{vars.$blue};
+    --cyan: #{vars.$cyan};
+    --orange: #{vars.$orange};
+    --text: #{vars.$text};
+    --muted: #{vars.$muted};
+    --surface: #{vars.$surface};
+    --background: #{vars.$background};
+    --border: #{vars.$border};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: vars.$text;
+    background: vars.$background;
+    font-family: Arial, Helvetica, sans-serif;
+}

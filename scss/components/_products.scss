@@ -1,0 +1,106 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+.service {
+    position: relative;
+    min-width: 250px;
+    padding: 30px;
+    border: 1px solid vars.$border;
+    border-radius: 16px;
+    flex: 1;
+    background: white;
+    @include mixins.shadow(0 15px 38px rgba(32, 62, 89, 0.08));
+}
+
+.featured-service {
+    color: white;
+    background: linear-gradient(145deg, vars.$navy, #22558b);
+    transform: translateY(-10px);
+}
+
+.service-number {
+    position: absolute;
+    top: 24px;
+    right: 25px;
+    color: vars.$blue;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.featured-service {
+  .service-number {
+    color: #77ddd6;
+  }
+}
+
+.service-icon {
+    display: grid;
+    width: 59px;
+    height: 59px;
+    margin-bottom: 23px;
+    border-radius: 15px;
+    place-items: center;
+    color: white;
+    background: linear-gradient(135deg, vars.$blue, #60a3ef);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.featured-service {
+  .service-icon {
+    color: vars.$navy;
+    background: vars.$cyan;
+  }
+}
+
+.service {
+  h3 {
+    margin-bottom: 11px;
+    color: vars.$navy;
+    font-size: 22px;
+  }
+}
+
+.featured-service {
+  h3 {
+    color: white;
+  }
+}
+
+.service {
+  p {
+    min-height: 72px;
+    margin-bottom: 20px;
+    color: vars.$muted;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+.featured-service {
+  p {
+    color: #c8daeb;
+  }
+}
+
+.service {
+  a {
+    color: vars.$blue;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+}
+
+.featured-service {
+  a {
+    color: vars.$cyan;
+  }
+}

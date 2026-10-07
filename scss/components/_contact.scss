@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.cta-section {
+    display: flex;
+    width: min(1160px, calc(100% - 40px));
+    margin: 70px auto;
+    padding: 45px 50px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: white;
+    background: linear-gradient(120deg, vars.$navy, #235f9d);
+    @include mixins.shadow(0 22px 52px rgba(25, 58, 91, 0.2));
+    scroll-margin-top: 90px;
+}
+
+.cta-section {
+  .eyebrow {
+    color: #78ddd6;
+  }
+}
+
+.cta-section {
+  h2 {
+    max-width: 650px;
+    color: white;
+  }
+}
+
+.cta-section {
+  > div > p:last-child {
+    max-width: 650px;
+    color: #c8dcef;
+  }
+}
+
+.cta-button {
+    flex-shrink: 0;
+    color: vars.$navy;
+    background: vars.$cyan;
+}

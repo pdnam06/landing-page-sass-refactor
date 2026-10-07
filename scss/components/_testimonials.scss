@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.testimonials {
+    width: 100%;
+    max-width: none;
+    padding-right: max(20px, calc((100% - 1160px) / 2));
+    padding-left: max(20px, calc((100% - 1160px) / 2));
+    background: #e4edf5;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.testimonial {
+    margin: 0;
+    padding: 31px;
+    border-radius: 16px;
+    background: white;
+    @include mixins.shadow(0 14px 35px rgba(31, 61, 88, 0.08));
+}
+
+.stars {
+    margin-bottom: 18px;
+    color: vars.$orange;
+    letter-spacing: 3px;
+}
+
+.testimonial {
+  > p {
+    min-height: 70px;
+    color: vars.$text;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+.testimonial {
+  footer {
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.testimonial {
+  footer > span {
+    display: grid;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    place-items: center;
+    color: white;
+    background: vars.$blue;
+    font-size: 12px;
+    font-weight: 800;
+  }
+}
+
+.testimonial footer strong,
+.testimonial footer small {
+    display: block;
+}
+
+.testimonial {
+  footer strong {
+    color: vars.$navy;
+    font-size: 14px;
+  }
+}
+
+.testimonial {
+  footer small {
+    margin-top: 4px;
+    color: vars.$muted;
+    font-size: 11px;
+  }
+}

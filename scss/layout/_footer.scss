@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.footer {
+    color: #c4d3e2;
+    background: vars.$navy;
+}
+
+.footer-inner {
+    @include mixins.flex-between(100px, 25px);
+}
+
+.footer-logo {
+    color: white;
+    font-size: 18px;
+}
+
+.footer-logo {
+  > span {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+.footer-inner {
+  > p {
+    font-size: 11px;
+  }
+}
+
+.footer {
+  nav {
+    display: flex;
+    gap: 14px;
+  }
+}
+
+.footer {
+  nav a {
+    color: #d7e3ef;
+    font-size: 11px;
+    text-decoration: none;
+  }
+}
+
+.footer {
+  nav a:hover {
+    color: white;
+  }
+}

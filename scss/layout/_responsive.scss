@@ -1,0 +1,130 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+@include mixins.at-most(vars.$tablet-breakpoint) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 80px 0;
+    }
+
+    .hero-copy {
+        max-width: 760px;
+    }
+
+    .hero-visual {
+        max-width: 650px;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .process-copy {
+        position: static;
+    }
+}
+
+@include mixins.at-most(vars.$mobile-breakpoint) {
+    .header-inner,
+    .hero-inner,
+    .section,
+    .footer-inner {
+        width: calc(100% - 28px);
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .header-cta {
+        margin-left: auto;
+    }
+
+    .hero-inner {
+        min-height: 0;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .featured-service {
+        transform: none;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial > p {
+        min-height: 0;
+    }
+
+    .cta-section {
+        width: calc(100% - 28px);
+        padding: 35px 28px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-inner {
+        padding: 25px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@include mixins.at-most(vars.$small-breakpoint) {
+    .header-cta {
+        display: none;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-actions a {
+        text-align: center;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .chart-card {
+        grid-row: auto;
+    }
+
+    .chart-line {
+        height: 140px;
+        margin-top: 20px;
+    }
+
+    .process-list li {
+        grid-template-columns: 50px 1fr;
+        gap: 13px;
+    }
+
+    .footer nav {
+        flex-wrap: wrap;
+    }
+}

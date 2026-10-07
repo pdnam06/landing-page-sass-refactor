@@ -1,0 +1,19 @@
+@use "variables" as vars;
+
+@mixin flex-between($min-height, $gap) {
+  display: flex;
+  min-height: $min-height;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+@mixin at-most($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin shadow($value) {
+  box-shadow: $value;
+}

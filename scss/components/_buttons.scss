@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+.btn {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.primary-btn {
+    color: white;
+    background: vars.$blue;
+    @include mixins.shadow(0 9px 20px rgba(46, 123, 224, 0.24));
+}
+
+.secondary-btn {
+    color: vars.$navy;
+    background: white;
+    border: 1px solid vars.$border;
+}
